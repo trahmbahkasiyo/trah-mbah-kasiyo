@@ -1,0 +1,49 @@
+{
+    "id": 1,
+    "name": "Mbah Kasiyo",
+    "spouse": "Mbah Ngatinem",
+    "children": [
+        {
+            "id": 2,
+            "name": "Kasiran",
+            "status": "Alm",
+            "children": []
+        },
+        {
+            "id": 3,
+            "name": "Sagirah",
+            "children": []
+        },
+        {
+            "id": 4,
+            "name": "Sagiran",
+            "status": "Alm",
+            "children": []
+        },
+        {
+            "id": 5,
+            "name": "Sadirah",
+            "children": []
+        },
+        {
+            "id": 6,
+            "name": "Midah",
+            "children": []
+        },
+        {
+            "id": 7,
+            "name": "Dasiran",
+            "children": []
+        },
+        {
+            "id": 8,
+            "name": "Suyadi",
+            "children": []
+        },
+        {
+            "id": 9,
+            "name": "Pasinem",
+            "children": []
+        }
+    ]
+}
