@@ -1,0 +1,5 @@
+﻿# Files to ignore
+token Github.txt
+.env
+*.log
+node_modules/
