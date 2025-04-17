@@ -1129,9 +1129,17 @@ ol.generation-list-compact {
 
 /* Style Tombol Hamburger (Awalnya Tersembunyi) */
 .hamburger-btn {
-    /* ... pastikan display: none; di sini (di luar media query) ... */
-    /* Pastikan z-index tinggi: z-index: 1100; */
-    /* ... sisa style hamburger ... */
+    display: none; /* Penting: Sembunyikan di desktop */
+    position: fixed; 
+    top: 15px;
+    left: 15px;
+    z-index: 1100; /* Penting: Pastikan z-index tinggi */
+    background: #1e3a5f;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 /* ... style overlay ... */
