@@ -168,4 +168,67 @@ document.addEventListener('DOMContentLoaded', function() {
             'btn-main-export'
         );
     }
-});
+
+    // --- Kode untuk Hamburger Menu ---
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+    // const mainContent = document.querySelector('.main-content'); // Mungkin tidak perlu
+
+    if (hamburgerBtn && sidebar && overlay) {
+        hamburgerBtn.addEventListener('click', () => {
+            const isVisible = sidebar.classList.toggle('sidebar-visible');
+            overlay.classList.toggle('active');
+            hamburgerBtn.classList.toggle('active');
+
+            // Update atribut ARIA
+            hamburgerBtn.setAttribute('aria-expanded', isVisible);
+            sidebar.setAttribute('aria-hidden', !isVisible);
+
+            // Optional: Mencegah scroll body saat sidebar terbuka
+            // document.body.style.overflow = isVisible ? 'hidden' : '';
+        });
+
+        // Fungsi untuk menutup sidebar
+        const closeSidebar = () => {
+            sidebar.classList.remove('sidebar-visible');
+            overlay.classList.remove('active');
+            hamburgerBtn.classList.remove('active');
+            hamburgerBtn.setAttribute('aria-expanded', 'false');
+            sidebar.setAttribute('aria-hidden', 'true');
+            // document.body.style.overflow = ''; // Kembalikan scroll body
+        };
+
+        // Tutup sidebar saat mengklik overlay
+        overlay.addEventListener('click', closeSidebar);
+
+        // Tutup sidebar saat mengklik link menu di dalamnya
+        const menuLinks = sidebar.querySelectorAll('.menu a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Hanya tutup jika layar <= 1024px (sesuai breakpoint CSS)
+                if (window.innerWidth <= 1024) {
+                    closeSidebar();
+                }
+            });
+        });
+
+        // Tutup sidebar jika ukuran window diubah jadi lebih besar dari 1024px
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 1024) {
+                // Pastikan sidebar tertutup dan state kembali normal di desktop
+                closeSidebar();
+            }
+        });
+    }
+    // --- Akhir Kode Hamburger Menu ---
+
+
+    // Panggil fungsi inisialisasi lainnya jika ada
+    initDiagramInteraction();
+    setupGalleryLightbox();
+    // ... (panggil fungsi setup lainnya) ...
+
+}); // Akhir dari DOMContentLoaded
+
+// ... (fungsi initDiagramInteraction, setupGalleryLightbox, dll. yang sudah ada) ...
