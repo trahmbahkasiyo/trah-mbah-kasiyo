@@ -953,7 +953,8 @@ ol.generation-list-compact {
 /* Tablet & Mobile (Contoh: <= 1024px) */
 @media (max-width: 1024px) {
     .hamburger-btn {
-        display: block; /* Tampilkan tombol hamburger */
+        display: block; /* Pastikan ini ada dan tidak dioverride */
+        /* Cek juga z-index jika perlu: z-index: 1100; */
     }
 
     /* Hapus aturan flex-direction: column pada container */
@@ -962,44 +963,47 @@ ol.generation-list-compact {
     } */
 
     .sidebar {
-        position: fixed; /* Keluarkan dari alur normal, bisa overlay */
+        position: fixed;
         left: 0;
         top: 0;
-        height: 100vh; /* Tinggi penuh layar */
-        width: 250px; /* Lebar sidebar tetap */
-        z-index: 1000; /* Di atas overlay, di bawah hamburger */
-        transform: translateX(-100%); /* Sembunyikan ke kiri */
-        transition: transform 0.3s ease-in-out; /* Animasi slide */
-        overflow-y: auto; /* Scroll jika konten sidebar panjang */
-        padding-top: 60px; /* Beri ruang di atas agar tidak tertutup hamburger */
-        padding-bottom: 20px; /* Padding bawah */
-        /* Hapus aturan width: 100% dan padding sebelumnya */
+        height: 100vh;
+        width: 250px;
+        z-index: 1000;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        overflow-y: auto;
+        padding-top: 60px;
+        padding-bottom: 20px;
+        /* --- PASTIKAN ADA INI --- */
+        background-color: #1e3a5f; /* Tambahkan/Pastikan background ada */
+        display: flex;             /* Pastikan display flex */
+        flex-direction: column;    /* Pastikan arah kolom */
+        color: white;              /* Pastikan warna teks putih */
+        /* --- AKHIR PENAMBAHAN/PEMASTIAN --- */
     }
 
     .sidebar.sidebar-visible {
-        transform: translateX(0); /* Tampilkan sidebar (slide dari kiri) */
-        box-shadow: 3px 0 10px rgba(0,0,0,0.2); /* Tambahkan shadow saat terlihat */
+        transform: translateX(0);
+        box-shadow: 3px 0 10px rgba(0,0,0,0.2);
     }
 
-    /* Atribut Aksesibilitas */
+    /* Atribut Aksesibilitas (biarkan seperti sebelumnya) */
     .sidebar[aria-hidden="false"] {
-        display: flex; /* Pastikan display flex saat terlihat (jika sebelumnya none) */
+        display: flex; 
     }
      .sidebar[aria-hidden="true"] {
-        display: flex; /* Tetap flex agar transisi transform bekerja, tapi tersembunyi */
-        /* Jika ingin pakai display none/flex, transition tidak akan jalan */
+        display: flex; 
     }
 
-    /* Aturan lain dalam media query 1024px ini mungkin masih relevan */
+    /* ... sisa aturan di media query 1024px ... */
     .generation-info ol {
-        grid-template-columns: repeat(2, 1fr); /* 2 kolom di tablet */
+        grid-template-columns: repeat(2, 1fr);
     }
     .gallery-grid {
-        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); /* Thumbnail sedikit lebih kecil */
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
     }
-    /* .header min-height bisa dipertahankan jika diperlukan */
      .header {
-         min-height: 150px;
+        min-height: 150px;
      }
 }
 
@@ -1017,14 +1021,14 @@ ol.generation-list-compact {
         margin-bottom: 15px;
     }
     .generation-info ol {
-        grid-template-columns: 1fr; /* 1 kolom saja */
+        grid-template-columns: 1fr;
         padding-left: 10px; /* Kurangi indentasi list */
     }
      ol.generation-list-compact {
          grid-template-columns: 1fr; /* 1 kolom juga untuk list compact */
      }
     .gallery-grid {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Lebih kecil lagi */
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
         gap: 10px;
     }
     .silsilah-controls {
@@ -1125,54 +1129,10 @@ ol.generation-list-compact {
 
 /* Style Tombol Hamburger (Awalnya Tersembunyi) */
 .hamburger-btn {
-    display: none; /* Sembunyikan di desktop */
-    position: fixed; /* Tetap di layar saat scroll */
-    top: 15px;
-    left: 15px;
-    z-index: 1100; /* Di atas sidebar & overlay */
-    background: #1e3a5f;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    /* ... pastikan display: none; di sini (di luar media query) ... */
+    /* Pastikan z-index tinggi: z-index: 1100; */
+    /* ... sisa style hamburger ... */
 }
 
-.hamburger-btn span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 5px 0;
-    transition: all 0.3s ease-in-out;
-}
-
-/* Style untuk Overlay Background Gelap (Awalnya Tersembunyi) */
-.overlay {
-     display: none;
-     position: fixed;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     background-color: rgba(0, 0, 0, 0.6); /* Warna gelap transparan */
-     z-index: 999; /* Di bawah sidebar, di atas konten */
-     opacity: 0;
-     transition: opacity 0.3s ease-in-out;
-}
-
-.overlay.active {
-    display: block;
-    opacity: 1;
-}
-
-/* Style Tombol Hamburger saat Aktif (Jadi 'X') */
-.hamburger-btn.active span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-}
-.hamburger-btn.active span:nth-child(2) {
-    opacity: 0;
-}
-.hamburger-btn.active span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-}
+/* ... style overlay ... */
+/* ... style hamburger active ... */
