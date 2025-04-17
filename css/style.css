@@ -953,8 +953,7 @@ ol.generation-list-compact {
 /* Tablet & Mobile (Contoh: <= 1024px) */
 @media (max-width: 1024px) {
     .hamburger-btn {
-        display: block; /* Pastikan ini ada dan tidak dioverride */
-        /* Cek juga z-index jika perlu: z-index: 1100; */
+        display: block; /* Menampilkan tombol di layar kecil */
     }
 
     /* Hapus aturan flex-direction: column pada container */
@@ -1134,13 +1133,58 @@ ol.generation-list-compact {
     top: 15px;
     left: 15px;
     z-index: 1100; /* Penting: Pastikan z-index tinggi */
-    background: #1e3a5f;
+    background: #1e3a5f; /* Agar tombol punya warna */
     border: none;
-    padding: 10px;
-    cursor: pointer;
+    padding: 10px; /* PENTING: Ini memberi ukuran pada tombol */
+    cursor: pointer; /* Lebih baik dari default */
     border-radius: 4px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    /* Pastikan tidak ada properti lain yang aneh di sini */
 }
 
-/* ... style overlay ... */
-/* ... style hamburger active ... */
+.hamburger-btn span { /* Style untuk garis-garis di dalam tombol */
+    display: block;
+    width: 25px;  /* Lebar garis */
+    height: 3px;   /* Tinggi garis */
+    background-color: white; /* Warna garis */
+    margin: 5px 0; /* Jarak antar garis */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Style untuk Overlay Background Gelap (Awalnya Tersembunyi) */
+.overlay {
+     display: none;
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.6); 
+     z-index: 999; 
+     opacity: 0;
+     transition: opacity 0.3s ease-in-out;
+}
+
+.overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Style Tombol Hamburger saat Aktif (Jadi 'X') */
+.hamburger-btn.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger-btn.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* === RESPONSIVE ADJUSTMENTS === */
+@media (max-width: 1024px) {
+    .hamburger-btn {
+        display: block; /* Menampilkan tombol di layar kecil */
+    }
+    /* ... aturan sidebar dan lainnya di sini ... */
+}
