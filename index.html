@@ -8,13 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
-    <body>
-        <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Menu" aria-expanded="false" aria-controls="sidebar">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <div class="overlay" id="overlay"></div>
+<body>
     <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Menu" aria-expanded="false" aria-controls="sidebar">
         <span></span>
         <span></span>
@@ -111,18 +105,9 @@
                     <li><a href="galeri.html">GALERI & INFORMASI</a></li>
                 </ul>
             </div>
-            <div class="update-info">
+            <div class="update-info" id="update-info-container">
                 <h3>UPDATE INFO TERBARU</h3>
-                <div class="info-item">
-                    <p class="date">JAKARTA, 09 APRIL 2023</p>
-                    <p class="title">PERTEMUAN KELUARGA BESAR</p>
-                    <p class="content">Pertemuan keluarga besar akan diadakan di Jakarta pada tanggal 09 April 2023. Mohon kehadiran seluruh anggota keluarga.</p>
-                </div>
-                <div class="info-item">
-                    <p class="date">JAKARTA, 02 JANUARI 2023</p>
-                    <p class="title">TEMU LAHIR PUTRA DARI KELUARGA</p>
-                    <p class="content">Telah lahir putra pertama dari keluarga Bapak Sutrisno pada tanggal 02 Januari 2023 di Jakarta.</p>
-                </div>
+                <p>Memuat info terbaru...</p>
             </div>
             <div class="footer">
                 <p>Design By: Wiyadi - 081322289333</p>
@@ -190,16 +175,5 @@
     <!-- Script -->
     <script src="js/updates.js"></script>
     <script src="js/main.js"></script>
-    <script>
-        // Cukup gunakan window.onload
-        window.onload = function() {
-            console.log('Window loaded');
-            // Bersihkan container jika diperlukan
-            const updateContainer = document.querySelector('.update-info');
-            if (updateContainer) {
-                updateContainer.innerHTML = '';
-            }
-        }
-    </script>
 </body>
 </html>
