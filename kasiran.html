@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Judul spesifik untuk halaman ini -->
+    <title>Silsilah - Keluarga Kasiran</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome jika diperlukan -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<!-- Tambahkan ID atau data-attribute untuk identifikasi halaman -->
+<body data-branch="kasiran">
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo Keluarga Besar">
+                <h3>KELUARGA BESAR</h3>
+                <p>KASIO MERTODIMBEJO & NGATINEM MERTODIMBEJO</p>
+            </div>
+            <div class="divider"></div>
+            <nav class="menu">
+                <ul>
+                    <!-- Search dan Filter (Sama) -->
+                    <div class="sidebar-search">
+                        <input type="text" id="search-input" placeholder="Cari Nama...">
+                        <button class="search-btn" id="search-button">Cari</button>
+                    </div>
+                    <div class="sidebar-filters">
+                        <!-- Filter Generasi -->
+                        <div class="filter-group">
+                            <label for="filter-generasi">Generasi:</label>
+                            <select id="filter-generasi" name="generasi">
+                                <option value="">Semua Generasi</option>
+                                <option value="Anak">Anak</option>
+                                <option value="Putu">Putu (Cucu)</option>
+                                <option value="Buyu">Buyu (Cicit)</option>
+                                <!-- ... Opsi lainnya ... -->
+                                <option value="Trah Tumerah">Trah Tumerah</option>
+                            </select>
+                        </div>
+                        <!-- Filter Jenis Kelamin -->
+                        <div class="filter-group">
+                            <label>Jenis Kelamin:</label>
+                            <div class="radio-group">
+                                <input type="radio" id="gender-semua" name="jenisKelamin" value="" checked>
+                                <label for="gender-semua">Semua</label>
+                                <input type="radio" id="gender-pria" name="jenisKelamin" value="Pria">
+                                <label for="gender-pria">Pria</label>
+                                <input type="radio" id="gender-wanita" name="jenisKelamin" value="Wanita">
+                                <label for="gender-wanita">Wanita</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Menu Navigasi (Update 'active' class jika perlu) -->
+                    <li><a href="index.html">BERANDA</a></li>
+                    <!-- Tandai link KASIRAN sebagai aktif di halaman ini -->
+                    <li class="active"><a href="kasiran.html">KASIRAN</a></li>
+                    <li><a href="sagirah.html">SAGIRAH</a></li>
+                    <li><a href="sagiran.html">SAGIRAN</a></li>
+                    <li><a href="sadirah.html">SADIRAH</a></li>
+                    <li><a href="midah.html">MIDAH</a></li>
+                    <li><a href="dasiran.html">DASIRAN</a></li>
+                    <li><a href="suyadi.html">SUYADI</a></li>
+                    <li><a href="pasinem.html">PASINEM</a></li>
+                    <li><a href="keluarga-besar.html">KELUARGA BESAR</a></li>
+                    <li><a href="galeri.html">GALERI & INFORMASI</a></li>
+                </ul>
+            </nav>
+
+            <!-- Footer (Tetap ada) -->
+            <div class="footer">
+                <p>Design By: Wiyadi - 081322289333</p>
+            </div>
+        </div>
+
+        <!-- Main Content (Konten Spesifik Halaman) -->
+        <div class="main-content">
+            <div class="header">
+                 <!-- Ganti H1/H2 dengan img banner -->
+                 <img src="img/banner kasiran.jpg" alt="Banner Keluarga Kasiran" class="header-banner-image">
+            </div>
+
+            <div class="content-box">
+                <!-- Konten Utama Halaman Kasiran -->
+                <h2>Diagram Silsilah Keluarga Kasiran</h2>
+
+                <div class="silsilah-controls">
+                    <!-- Kontrol Zoom/Export bisa tetap ada -->
+                    <button id="btn-zoom-in">Zoom In</button>
+                    <button id="btn-zoom-out">Zoom Out</button>
+                    <button id="btn-reset">Reset</button>
+                    <button id="btn-export">Export</button>
+                </div>
+
+                <!-- Area untuk menampilkan diagram/daftar keluarga Kasiran -->
+                <div class="silsilah-diagram" id="kasiran-diagram-container">
+                     <!-- Tambahkan ID unik pada gambar -->
+                     <img src="img/family-diagram-kasiran.png" alt="Diagram Silsilah Keluarga Kasiran" class="family-diagram-image" id="kasiran-diagram-image">
+                    <!-- Komentar ini mungkin perlu dihapus/diubah karena konten sekarang statis -->
+                    <!-- Konten akan diisi oleh JavaScript -->
+                </div>
+
+                 <!-- Ruang Konten Keterangan (Sudah ada, pastikan posisinya di sini) -->
+                 <div class="branch-info">
+                     <h3>Profil Singkat</h3>
+                     <p>Lahir pada tahun :.</p>
+                     <p>Wafat pada tahun :.</p>
+                     <p>Pasangan :.</p>
+                     <p>Anak :.</p>
+                     <p>Cucu :.</p>
+                     <p>Cicit :.</p>
+                     <p>Buyut :.</p>
+                     <!-- Tambahkan konten lain di sini sesuai kebutuhan -->
+                 </div>
+
+            </div> <!-- Akhir .content-box -->
+        </div> <!-- Akhir .main-content -->
+    </div> <!-- Akhir .container -->
+
+    <!-- Script (Sertakan silsilah-manager dan main) -->
+    <!-- Mungkin perlu script khusus halaman ini atau modifikasi main.js -->
+    <script src="js/silsilah-manager.js"></script>
+    <script src="js/main.js"></script>
+    <!-- <script src="js/kasiran-page.js"></script> --> <!-- Opsional -->
+</body>
+</html> 

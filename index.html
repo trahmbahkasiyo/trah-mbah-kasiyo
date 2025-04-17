@@ -3,330 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRAH MBAH KASIYO</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
+    <title>Silsilah Keluarga Besar Kasio Mertodimbejo & Ngatinem Mertodimbejo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">TRAH MBAH KASIYO</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#beranda">Beranda</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#silsilah">Silsilah</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#sejarah">Sejarah</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#galeri">Galeri</a></li>
-                </ul>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo Keluarga Besar">
+                <h3>KELUARGA BESAR</h3>
+                <p>KASIO MERTODIMBEJO & NGATINEM MERTODIMBEJO</p>
             </div>
-        </div>
-    </nav>
-
-    <header class="hero-section">
-        <div class="container text-center">
-            <h1>Silsilah Keluarga Besar Mbah Kasiyo</h1>
-            <p>Melestarikan Sejarah dan Silsilah Keluarga</p>
-        </div>
-    </header>
-
-    <section id="silsilah" class="py-5">
-        <div class="container">
-            <div class="search-container">
-                <input type="text" class="search-input" placeholder="Cari anggota keluarga...">
-                <button class="btn btn-primary" id="searchButton">Cari</button>
-            </div>
-            <div class="generation-filter">
-                <select id="generationSelect" class="form-select">
-                    <option value="all">Semua Generasi</option>
-                    <option value="1">Anak</option>
-                    <option value="2">Putu (Cucu)</option>
-                    <option value="3">Buyut (Cicit)</option>
-                    <option value="4">Canggah</option>
-                    <option value="5">Wareng</option>
-                    <option value="6">Udhek-udhek</option>
-                    <option value="7">Gantung siwur</option>
-                    <option value="8">Cicip moning</option>
-                    <option value="9">Petarangan bobrok</option>
-                    <option value="10">Gropak senthe</option>
-                    <option value="11">Gropak waton</option>
-                    <option value="12">Cendheng</option>
-                    <option value="13">Giyeng</option>
-                    <option value="14">Cumpleng</option>
-                    <option value="15">Ampleng</option>
-                    <option value="16">Menyaman</option>
-                    <option value="17">Menya-menya</option>
-                    <option value="18">Trah tumerah</option>
-                </select>
-            </div>
-            <div class="family-tree"></div>
-        </div>
-    </section>
-
-    <section id="sejarah" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-4">Sejarah Trah Mbah Kasiyo</h2>
-            <div class="row">
-                <div class="col-md-8 mx-auto">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Mbah Kasiyo & Mbah Ngatinem</h5>
-                            <p class="card-text">
-                                Mbah Kasiyo dan Mbah Ngatinem adalah leluhur dari keluarga besar ini.
-                                Mereka dikaruniai 8 orang anak yang kemudian menurunkan banyak generasi hingga saat ini.
-                            </p>
-                            <h6 class="mt-4">Putra-Putri:</h6>
-                            <ol>
-                                <li>Kasiran (Alm)</li>
-                                <li>Sagirah</li>
-                                <li>Sagiran (Alm)</li>
-                                <li>Sadirah</li>
-                                <li>Midah</li>
-                                <li>Dasiran</li>
-                                <li>Suyadi</li>
-                                <li>Pasinem</li>
-                            </ol>
-                        </div>
+            
+            <!-- Menghapus search box dari sini -->
+            
+            <div class="divider"></div>
+            
+            <div class="menu">
+                <ul>
+                    <div class="sidebar-search">
+                        <input type="text" id="search-input" placeholder="Cari Nama...">
+                        <button class="search-btn" id="search-button">Cari</button>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="galeri" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Galeri Foto Keluarga</h2>
-            <div class="row" id="galeriContainer">
-                <!-- Foto akan dirender oleh JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Modal Foto -->
-    <div class="modal fade" id="fotoModal">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Detail Foto</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <img src="" class="img-fluid" id="modalFoto">
-                    <p class="mt-3" id="modalKeterangan"></p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Tambahkan sebelum closing body tag -->
-    <div class="modal fade" id="anggotaModal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Data Anggota Keluarga</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="anggotaForm">
-                        <input type="hidden" id="anggotaId">
-                        <div class="mb-3">
-                            <label class="form-label">Nama</label>
-                            <input type="text" class="form-control" id="namaAnggota" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Pasangan</label>
-                            <input type="text" class="form-control" id="pasanganAnggota">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Status</label>
-                            <select class="form-select" id="statusAnggota">
-                                <option value="">Hidup</option>
-                                <option value="Alm">Almarhum/Almarhumah</option>
+                    <!-- Tambahkan Filter di sini -->
+                    <div class="sidebar-filters">
+                        <div class="filter-group">
+                            <label for="filter-generasi">Generasi:</label>
+                            <select id="filter-generasi" name="generasi">
+                                <option value="">Semua Generasi</option>
+                                <!-- Opsi generasi akan diisi oleh JS atau bisa hardcode jika tetap -->
+                                <option value="Anak">Anak</option>
+                                <option value="Putu">Putu (Cucu)</option>
+                                <option value="Buyut">Buyu (Cicit)</option>
+                                <option value="Canggah">Canggah</option>
+                                <option value="Wareng">Wareng</option>
+                                <!-- Lanjutkan sesuai daftar generasi di README -->
+                                <option value="Udhek-udhek">Udhek-udhek</option>
+                                <option value="Gantung siwur">Gantung siwur</option>
+                                <option value="Cicip Moning">Cicip Moning</option>
+                                <option value="Petarangan Bobrok">Petarangan Bobrok</option>
+                                <option value="Gropak Senthe">Gropak Senthe</option>
+                                <option value="Gropak Waton">Gropak Waton</option>
+                                <option value="Cendheng">Cendheng</option>
+                                <option value="Giyeng">Giyeng</option>
+                                <option value="Cumpleng">Cumpleng</option>
+                                <option value="Ampleng">Ampleng</option>
+                                <option value="Menyaman">Menyaman</option>
+                                <option value="Menya Menya">Menya Menya</option>
+                                <option value="Trah Tumerah">Trah Tumerah</option>
                             </select>
                         </div>
-                        <div class="mb-3">
-                            <label class="form-label">Foto</label>
-                            <input type="file" class="form-control" id="fotoAnggota" accept="image/*">
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                    <button type="button" class="btn btn-primary" id="simpanAnggota">Simpan</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="data-management mb-4">
-            <button class="btn btn-success" onclick="exportData()">Export Data</button>
-            <input type="file" id="importFile" accept=".json" style="display: none;" 
-                       onchange="importData(this.files[0])">
-            <button class="btn btn-primary" onclick="document.getElementById('importFile').click()">
-                Import Data
-            </button>
-            <button class="btn btn-secondary" onclick="printSilsilah()">
-                <i class="bi bi-printer"></i> Cetak Silsilah
-            </button>
-        </div>
-    </div>
-    <section id="statistik" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-4">Statistik Keluarga</h2>
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <h3 id="totalAnggota">0</h3>
-                            <p>Total Anggota</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <h3 id="totalGenerasi">0</h3>
-                            <p>Total Generasi</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <h3 id="totalKeluarga">0</h3>
-                            <p>Total Keluarga Inti</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <h3 id="totalCabang">0</h3>
-                            <p>Total Cabang</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="komentar" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Komentar & Diskusi</h2>
-            <div class="row">
-                <div class="col-md-8 mx-auto">
-                    <div class="card">
-                        <div class="card-body">
-                            <form id="komentarForm">
-                                <div class="mb-3">
-                                    <label class="form-label">Nama</label>
-                                    <input type="text" class="form-control" id="namaKomentar" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Komentar</label>
-                                    <textarea class="form-control" id="isiKomentar" rows="3" required></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Kirim Komentar</button>
-                            </form>
-                            <div id="daftarKomentar" class="mt-4">
-                                <!-- Komentar akan dirender di sini -->
+                        <div class="filter-group">
+                            <label>Jenis Kelamin:</label>
+                            <div class="radio-group">
+                                <input type="radio" id="gender-semua" name="jenisKelamin" value="" checked>
+                                <label for="gender-semua">Semua</label>
+                                <input type="radio" id="gender-pria" name="jenisKelamin" value="Pria">
+                                <label for="gender-pria">Pria</label>
+                                <input type="radio" id="gender-wanita" name="jenisKelamin" value="Wanita">
+                                <label for="gender-wanita">Wanita</label>
                             </div>
                         </div>
+                         <!-- Tambahkan filter status jika diinginkan -->
+                         <!--
+                         <div class="filter-group">
+                             <label>Status:</label>
+                             <div class="radio-group">
+                                 <input type="radio" id="status-semua" name="status" value="" checked>
+                                 <label for="status-semua">Semua</label>
+                                 <input type="radio" id="status-hidup" name="status" value="Hidup">
+                                 <label for="status-hidup">Hidup</label>
+                                 <input type="radio" id="status-meninggal" name="status" value="Meninggal">
+                                 <label for="status-meninggal">Meninggal</label>
+                             </div>
+                         </div>
+                         -->
                     </div>
+                    <!-- Akhir Filter -->
+
+                    <li class="active"><a href="#">BERANDA</a></li>
+                    <li><a href="kasiran.html">KASIRAN</a></li>
+                    <li><a href="sagirah.html">SAGIRAH</a></li>
+                    <li><a href="sagiran.html">SAGIRAN</a></li>
+                    <li><a href="sadirah.html">SADIRAH</a></li>
+                    <li><a href="midah.html">MIDAH</a></li>
+                    <li><a href="dasiran.html">DASIRAN</a></li>
+                    <li><a href="suyadi.html">SUYADI</a></li>
+                    <li><a href="pasinem.html">PASINEM</a></li>
+                    <li><a href="keluarga-besar.html">KELUARGA BESAR</a></li>
+                    <li><a href="galeri.html">GALERI & INFORMASI</a></li>
+                </ul>
+            </div>
+            <div class="update-info">
+                <h3>UPDATE INFO TERBARU</h3>
+                <div class="info-item">
+                    <p class="date">JAKARTA, 09 APRIL 2023</p>
+                    <p class="title">PERTEMUAN KELUARGA BESAR</p>
+                    <p class="content">Pertemuan keluarga besar akan diadakan di Jakarta pada tanggal 09 April 2023. Mohon kehadiran seluruh anggota keluarga.</p>
+                </div>
+                <div class="info-item">
+                    <p class="date">JAKARTA, 02 JANUARI 2023</p>
+                    <p class="title">TEMU LAHIR PUTRA DARI KELUARGA</p>
+                    <p class="content">Telah lahir putra pertama dari keluarga Bapak Sutrisno pada tanggal 02 Januari 2023 di Jakarta.</p>
+                </div>
+            </div>
+            <div class="footer">
+                <p>Design By: Wiyadi - 081322289333</p>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header hanya berisi banner tanpa teks -->
+            <div class="header">
+                <!-- Semua teks dihapus -->
+            </div>
+
+            <div class="content-box">
+                <h2>KELUARGA KASIO MERTODIMBEJO & NGATINEM MERTODIMBEJO</h2>
+
+                <!-- TAMBAHKAN Kontrol Diagram di sini -->
+                <div class="silsilah-controls">
+                    <button id="btn-main-zoom-in">Zoom In</button>
+                    <button id="btn-main-zoom-out">Zoom Out</button>
+                    <button id="btn-main-reset">Reset</button>
+                    <button id="btn-main-export">Export</button>
+                </div>
+                <!-- AKHIR Kontrol Diagram -->
+
+                <!-- Modifikasi Kontainer dan Gambar Diagram -->
+                <div class="family-tree silsilah-diagram" id="main-diagram-container">
+                    <img src="img/family-diagram.png" alt="Silsilah Keluarga" class="family-diagram-image" id="main-diagram-image">
+                </div>
+                
+                <div class="intro-text">
+                    <h3>KATA PENGANTAR</h3>
+                    <p>Selamat datang di website silsilah keluarga besar Kasio Mertodimbejo & Ngatinem Mertodimbejo. Website ini dibuat untuk mendokumentasikan dan melestarikan silsilah keluarga kita hingga 18 generasi.</p>
+                    <p>Silsilah keluarga merupakan amanah dan warisan berharga yang perlu kita jaga dan teruskan kepada generasi selanjutnya. Melalui website ini, diharapkan seluruh anggota keluarga dapat mengenal asal-usul dan hubungan kekerabatan satu sama lain.</p>
+                    <p>Kami mengundang seluruh anggota keluarga untuk berpartisipasi dalam melengkapi dan memperbarui informasi silsilah keluarga ini.</p>
+                </div>
+                
+                <div class="generation-info">
+                    <h3>TINGKATAN GENERASI DALAM SILSILAH</h3>
+                    <ol>
+                        <li>Anak</li>
+                        <li>Putu (Cucu)</li>
+                        <li>Buyut (Cicit)</li>
+                        <li>Canggah</li>
+                        <li>Wareng</li>
+                        <li>Udhek-udhek</li>
+                        <li>Gantung siwur</li>
+                        <li>Cicip Moning</li>
+                        <li>Petarangan Bobrok</li>
+                        <li>Gropak Senthe</li>
+                        <li>Gropak Waton</li>
+                        <li>Cendheng</li>
+                        <li>Giyeng</li>
+                        <li>Cumpleng</li>
+                        <li>Ampleng</li>
+                        <li>Menyaman</li>
+                        <li>Menya Menya</li>
+                        <li>Trah Tumerah</li>
+                    </ol>
                 </div>
             </div>
         </div>
-    </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    </div>
+
+    <!-- Script -->
+    <script src="js/updates.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Cukup gunakan window.onload
+        window.onload = function() {
+            console.log('Window loaded');
+            // Bersihkan container jika diperlukan
+            const updateContainer = document.querySelector('.update-info');
+            if (updateContainer) {
+                updateContainer.innerHTML = '';
+            }
+        }
+    </script>
 </body>
 </html>
-
-<section id="events" class="py-5">
-    <div class="container">
-        <h2 class="text-center mb-4">Agenda Keluarga</h2>
-        <div class="row">
-            <div class="col-md-8 mx-auto">
-                <div id="eventList" class="list-group">
-                    <!-- Events will be rendered here -->
-                </div>
-                <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#eventModal">
-                    Tambah Acara
-                </button>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Event Modal -->
-<div class="modal fade" id="eventModal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Tambah Acara Keluarga</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body">
-                <form id="eventForm">
-                    <div class="mb-3">
-                        <label>Nama Acara</label>
-                        <input type="text" class="form-control" id="eventName" required>
-                    </div>
-                    <div class="mb-3">
-                        <label>Tanggal</label>
-                        <input type="date" class="form-control" id="eventDate" required>
-                    </div>
-                    <div class="mb-3">
-                        <label>Lokasi</label>
-                        <input type="text" class="form-control" id="eventLocation" required>
-                    </div>
-                    <div class="mb-3">
-                        <label>Deskripsi</label>
-                        <textarea class="form-control" id="eventDescription" rows="3"></textarea>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                <button type="button" class="btn btn-primary" id="saveEvent">Simpan</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<section id="berita" class="py-5">
-    <div class="container">
-        <h2 class="text-center mb-4">Berita & Pengumuman</h2>
-        <div class="row">
-            <div class="col-md-8">
-                <div id="daftarBerita"></div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Tambah Berita</h5>
-                        <form id="beritaForm">
-                            <div class="mb-3">
-                                <label>Judul</label>
-                                <input type="text" class="form-control" id="judulBerita" required>
-                            </div>
-                            <div class="mb-3">
-                                <label>Isi Berita</label>
-                                <textarea class="form-control" id="isiBerita" rows="4" required></textarea>
-                            </div>
-                            <div class="mb-3">
-                                <label>Kategori</label>
-                                <select class="form-select" id="kategoriBerita">
-                                    <option value="pengumuman">Pengumuman</option>
-                                    <option value="berita">Berita</option>
-                                    <option value="acara">Info Acara</option>
-                                </select>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Posting</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>

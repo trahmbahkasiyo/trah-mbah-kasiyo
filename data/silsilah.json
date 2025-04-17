@@ -1,49 +1,116 @@
 {
-    "id": 1,
-    "name": "Mbah Kasiyo",
-    "spouse": "Mbah Ngatinem",
-    "children": [
-        {
-            "id": 2,
-            "name": "Kasiran",
-            "status": "Alm",
-            "children": []
-        },
-        {
-            "id": 3,
-            "name": "Sagirah",
-            "children": []
-        },
-        {
-            "id": 4,
-            "name": "Sagiran",
-            "status": "Alm",
-            "children": []
-        },
-        {
-            "id": 5,
-            "name": "Sadirah",
-            "children": []
-        },
-        {
-            "id": 6,
-            "name": "Midah",
-            "children": []
-        },
-        {
-            "id": 7,
-            "name": "Dasiran",
-            "children": []
-        },
-        {
-            "id": 8,
-            "name": "Suyadi",
-            "children": []
-        },
-        {
-            "id": 9,
-            "name": "Pasinem",
-            "children": []
-        }
-    ]
+  "keluargaBesar": "Kasio Mertodimbejo & Ngatinem Mertodimbejo",
+  "lokasi": "Dsn. Ngronggo Ds. Getas Kec. Playen Kab. Gunung Kidul - D.I. Yogyakarta",
+  "kepalaKeluarga": [
+    {
+      "id": "kasio",
+      "nama": "KASIO MERTODIMBEJO",
+      "lokasi": "GUNUNG KIDUL",
+      "generasi": "KEPALA KELUARGA",
+      "gender": "male",
+      "foto": "img/placeholder.png"
+    },
+    {
+      "id": "ngatinem",
+      "nama": "NGATINEM MERTODIMBEJO",
+      "lokasi": "GUNUNG KIDUL",
+      "generasi": "KEPALA KELUARGA",
+      "gender": "female",
+      "foto": "img/placeholder.png"
+    }
+  ],
+  "anak": [
+    {
+      "id": "kasiran",
+      "nama": "KASIRAN (ALM)",
+      "lokasi": "GUNUNG KIDUL",
+      "generasi": "ANAK KE-1",
+      "gender": "male",
+      "foto": "img/placeholder.png",
+      "children": []
+    },
+    {
+      "id": "sagirah",
+      "nama": "SAGIRAH (ALM)",
+      "lokasi": "GUNUNG KIDUL",
+      "generasi": "ANAK KE-2",
+      "gender": "female",
+      "foto": "placeholder.png",
+      "children": []
+    },
+    {
+      "id": "sagiran",
+      "nama": "SAGIRAN (ALM)",
+      "lokasi": "GUNUNG KIDUL",
+      "generasi": "ANAK KE-3",
+      "gender": "male",
+      "foto": "placeholder.png",
+      "children": []
+    },
+    {
+      "id": "sadirah",
+      "nama": "SADIRAH",
+      "lokasi": "GUNUNG KIDUL",
+      "generasi": "ANAK KE-4",
+      "gender": "female",
+      "foto": "placeholder.png",
+      "children": []
+    },
+    {
+      "id": "midah",
+      "nama": "MIDAH",
+      "lokasi": "GUNUNG KIDUL",
+      "generasi": "ANAK KE-5",
+      "gender": "female",
+      "foto": "placeholder.png",
+      "children": []
+    },
+    {
+      "id": "dasiran",
+      "nama": "DASIRAN",
+      "lokasi": "GUNUNG KIDUL",
+      "generasi": "ANAK KE-6",
+      "gender": "male",
+      "foto": "placeholder.png",
+      "children": []
+    },
+    {
+      "id": "suyadi",
+      "nama": "SUYADI",
+      "lokasi": "GUNUNG KIDUL",
+      "generasi": "ANAK KE-7",
+      "gender": "male",
+      "foto": "placeholder.png",
+      "children": []
+    },
+    {
+      "id": "pasinem",
+      "nama": "PASINEM",
+      "lokasi": "GUNUNG KIDUL",
+      "generasi": "ANAK KE-8",
+      "gender": "female",
+      "foto": "placeholder.png",
+      "children": []
+    }
+  ],
+  "generasiNames": [
+    "Anak",
+    "Putu (Cucu)",
+    "Buyu (Cicit)",
+    "Canggah",
+    "Wareng",
+    "Udhek-udhek",
+    "Gantung siwur",
+    "Cicip Moning",
+    "Petarangan Bobrok",
+    "Gropak Senthe",
+    "Gropak Waton",
+    "Cendheng",
+    "Giyeng",
+    "Cumpleng",
+    "Ampleng",
+    "Menyaman",
+    "Menya Menya",
+    "Trah Tumerah"
+  ]
 }

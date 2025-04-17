@@ -1,0 +1,44 @@
+[
+  {
+    "thumbnailUrl": "img/placeholder.png",
+    "fullUrl": "img/placeholder.png",
+    "altText": "Contoh Gambar 1",
+    "caption": "Placeholder 1",
+    "category": "Contoh"
+  },
+  {
+    "thumbnailUrl": "img/placeholder.png",
+    "fullUrl": "img/placeholder.png",
+    "altText": "Contoh Gambar 2",
+    "caption": "Placeholder 2",
+    "category": "Contoh"
+  },
+  {
+    "thumbnailUrl": "img/placeholder.png",
+    "fullUrl": "img/placeholder.png",
+    "altText": "Contoh Gambar 3",
+    "caption": "Placeholder 3",
+    "category": "Contoh"
+  },
+  {
+    "thumbnailUrl": "img/placeholder.png",
+    "fullUrl": "img/placeholder.png",
+    "altText": "Contoh Gambar 4",
+    "caption": "Placeholder 4",
+    "category": "Contoh"
+  },
+  {
+    "thumbnailUrl": "img/placeholder.png",
+    "fullUrl": "img/placeholder.png",
+    "altText": "Contoh Gambar 5",
+    "caption": "Placeholder 5",
+    "category": "Contoh"
+  },
+  {
+    "thumbnailUrl": "img/placeholder.png",
+    "fullUrl": "img/placeholder.png",
+    "altText": "Contoh Gambar 6",
+    "caption": "Placeholder 6",
+    "category": "Contoh"
+  }
+] 

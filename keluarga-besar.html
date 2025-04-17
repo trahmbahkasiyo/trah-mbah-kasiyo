@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- === UBAH JUDUL === -->
+    <title>Silsilah - Diagram Keluarga Besar</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<!-- Hapus data-branch atau beri nilai unik jika perlu -->
+<body data-page="keluarga-besar">
+    <div class="container">
+        <div class="sidebar">
+             <div class="logo">
+                 <img src="img/logo.png" alt="Logo Keluarga Besar">
+                 <h3>KELUARGA BESAR</h3>
+                 <p>KASIO MERTODIMBEJO & NGATINEM MERTODIMBEJO</p>
+             </div>
+             <div class="divider"></div>
+            <nav class="menu">
+                <ul>
+                    <!-- Search dan Filter bisa tetap ada -->
+                    <div class="sidebar-search">
+                        <input type="text" id="search-input" placeholder="Cari Nama...">
+                        <button class="search-btn" id="search-button">Cari</button>
+                    </div>
+                    <div class="sidebar-filters">
+                        <div class="filter-group">
+                            <label for="filter-generasi">Generasi:</label>
+                            <select id="filter-generasi" name="generasi">
+                                 <option value="">Semua Generasi</option>
+                                 <option value="Anak">Anak</option>
+                                 <option value="Putu">Putu (Cucu)</option>
+                                 <option value="Buyut">Buyu (Cicit)</option>
+                                 <!-- ... opsi lain ... -->
+                                 <option value="Trah Tumerah">Trah Tumerah</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Jenis Kelamin:</label>
+                            <div class="radio-group">
+                                <input type="radio" id="gender-semua" name="jenisKelamin" value="" checked>
+                                <label for="gender-semua">Semua</label>
+                                <input type="radio" id="gender-pria" name="jenisKelamin" value="Pria">
+                                <label for="gender-pria">Pria</label>
+                                <input type="radio" id="gender-wanita" name="jenisKelamin" value="Wanita">
+                                <label for="gender-wanita">Wanita</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- === UPDATE ACTIVE CLASS === -->
+                    <li><a href="index.html">BERANDA</a></li>
+                    <li><a href="kasiran.html">KASIRAN</a></li>
+                    <li><a href="sagirah.html">SAGIRAH</a></li>
+                    <li><a href="sagiran.html">SAGIRAN</a></li>
+                    <li><a href="sadirah.html">SADIRAH</a></li>
+                    <li><a href="midah.html">MIDAH</a></li>
+                    <li><a href="dasiran.html">DASIRAN</a></li>
+                    <li><a href="suyadi.html">SUYADI</a></li>
+                    <li><a href="pasinem.html">PASINEM</a></li>
+                    <!-- Aktifkan ini -->
+                    <li class="active"><a href="keluarga-besar.html">KELUARGA BESAR</a></li>
+                    <li><a href="galeri.html">GALERI & INFORMASI</a></li>
+                </ul>
+            </nav>
+            <!-- Footer (Sama) -->
+            <div class="footer">
+                <p>Design By: Wiyadi - 081322289333</p>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="header">
+                 <!-- === UBAH GAMBAR BANNER === (Pastikan file ada) -->
+                 <img src="img/banner keluarga besar.jpg" alt="Banner Keluarga Besar" class="header-banner-image">
+            </div>
+
+            <div class="content-box">
+                <!-- === UBAH JUDUL KONTEN === -->
+                <h2>Diagram Lengkap Keluarga Besar</h2>
+
+                <div class="silsilah-controls">
+                    <!-- Gunakan ID standar untuk Zoom/Reset -->
+                    <button id="btn-zoom-in">Zoom In</button>
+                    <button id="btn-zoom-out">Zoom Out</button>
+                    <button id="btn-reset">Reset</button>
+                    <!-- Ubah tombol Export menjadi Download -->
+                    <button id="btn-download-hq">Download (HQ)</button>
+                </div>
+
+                <!-- === UBAH ID CONTAINER & GAMBAR DIAGRAM === (Pastikan file ada) -->
+                <div class="silsilah-diagram" id="keluarga-besar-diagram-container">
+                     <img src="img/family-diagram-keluarga besar.png" alt="Diagram Lengkap Keluarga Besar" class="family-diagram-image" id="keluarga-besar-diagram-image">
+                </div>
+
+                <!-- HAPUS BAGIAN branch-info -->
+                <!--
+                 <div class="branch-info">
+                     <h3>Profil Singkat</h3>
+                     ...
+                 </div>
+                -->
+
+            </div> <!-- Akhir .content-box -->
+        </div> <!-- Akhir .main-content -->
+    </div> <!-- Akhir .container -->
+
+    <script src="js/silsilah-manager.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Library tambahan untuk download (jika diperlukan) -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script> -->
+</body>
+</html> 

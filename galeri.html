@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- === UBAH JUDUL === -->
+    <title>Silsilah - Galeri & Informasi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<!-- Beri atribut data-page -->
+<body data-page="galeri-informasi">
+    <div class="container">
+        <div class="sidebar">
+             <div class="logo">
+                 <img src="img/logo.png" alt="Logo Keluarga Besar">
+                 <h3>KELUARGA BESAR</h3>
+                 <p>KASIO MERTODIMBEJO & NGATINEM MERTODIMBEJO</p>
+             </div>
+             <div class="divider"></div>
+            <nav class="menu">
+                <ul>
+                    <!-- Search dan Filter -->
+                    <div class="sidebar-search">
+                        <input type="text" id="search-input" placeholder="Cari Nama...">
+                        <button class="search-btn" id="search-button">Cari</button>
+                    </div>
+                    <div class="sidebar-filters">
+                         <div class="filter-group">
+                            <label for="filter-generasi">Generasi:</label>
+                            <select id="filter-generasi" name="generasi">
+                                 <option value="">Semua Generasi</option>
+                                 <option value="Anak">Anak</option>
+                                 <option value="Putu">Putu (Cucu)</option>
+                                 <option value="Buyut">Buyu (Cicit)</option>
+                                 <option value="Trah Tumerah">Trah Tumerah</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Jenis Kelamin:</label>
+                            <div class="radio-group">
+                                <input type="radio" id="gender-semua" name="jenisKelamin" value="" checked>
+                                <label for="gender-semua">Semua</label>
+                                <input type="radio" id="gender-pria" name="jenisKelamin" value="Pria">
+                                <label for="gender-pria">Pria</label>
+                                <input type="radio" id="gender-wanita" name="jenisKelamin" value="Wanita">
+                                <label for="gender-wanita">Wanita</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- === UPDATE ACTIVE CLASS === -->
+                    <li><a href="index.html">BERANDA</a></li>
+                    <li><a href="kasiran.html">KASIRAN</a></li>
+                    <li><a href="sagirah.html">SAGIRAH</a></li>
+                    <li><a href="sagiran.html">SAGIRAN</a></li>
+                    <li><a href="sadirah.html">SADIRAH</a></li>
+                    <li><a href="midah.html">MIDAH</a></li>
+                    <li><a href="dasiran.html">DASIRAN</a></li>
+                    <li><a href="suyadi.html">SUYADI</a></li>
+                    <li><a href="pasinem.html">PASINEM</a></li>
+                    <li><a href="keluarga-besar.html">KELUARGA BESAR</a></li>
+                     <!-- Aktifkan ini -->
+                    <li class="active"><a href="galeri.html">GALERI & INFORMASI</a></li>
+                </ul>
+            </nav>
+            <!-- Footer (Sama) -->
+            <div class="footer">
+                <p>Design By: Wiyadi - 081322289333</p>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="header">
+                 <!-- Gunakan banner default atau banner khusus halaman ini -->
+                 <img src="img/banner.jpg" alt="Banner Galeri & Informasi" class="header-banner-image">
+            </div>
+
+            <div class="content-box">
+                <!-- === JUDUL UTAMA HALAMAN === -->
+                <h2>Galeri Foto & Informasi Keluarga</h2>
+
+                <!-- === BAGIAN GALERI === -->
+                <div class="gallery-section">
+                    <h3>Galeri Foto</h3>
+                    <div class="gallery-grid" id="gallery-grid-container">
+                        <!-- Thumbnails akan dimuat di sini oleh JS -->
+                        <p class="placeholder-text">Memuat galeri...</p>
+                    </div>
+                </div>
+
+                 <!-- Pemisah visual (opsional) -->
+                 <hr class="section-divider">
+
+                 <!-- === BAGIAN INFORMASI === -->
+                 <div class="info-section">
+                    <h3>Informasi & Pengumuman</h3>
+
+                    <!-- Sub-bagian: Pengumuman Terbaru -->
+                    <div class="info-subsection" id="pengumuman-container">
+                        <h4>Pengumuman Terbaru</h4>
+                        <!-- Pengumuman akan dimuat di sini oleh JS -->
+                        <p class="placeholder-text">Memuat pengumuman...</p>
+                    </div>
+                    <!-- TAMBAHKAN Tombol Kontrol Pengumuman -->
+                    <div id="pengumuman-controls" style="display: none;"> <!-- Sembunyikan dulu -->
+                        <button id="toggle-pengumuman-btn">Baca Selengkapnya</button>
+                    </div>
+                    <!-- AKHIR Tombol Kontrol Pengumuman -->
+
+                    <!-- Sub-bagian: Kontak -->
+                    <div class="info-subsection">
+                        <h4>Kontak Informasi</h4>
+                        <p>Jika Anda memiliki foto, informasi tambahan, atau koreksi data silsilah, silakan hubungi:</p>
+                        <ul>
+                            <li>Nama Kontak 1: [Nomor Telepon/Email]</li>
+                            <li>Nama Kontak 2: [Nomor Telepon/Email]</li>
+                        </ul>
+                        <p>Kami sangat menghargai partisipasi Anda dalam melengkapi sejarah keluarga ini.</p>
+                    </div>
+
+                     <!-- Sub-bagian: Struktur Generasi -->
+                     <div class="info-subsection">
+                         <h4>Tingkatan Generasi</h4>
+                         <ol class="generation-list-compact"> <!-- Class baru untuk styling berbeda jika perlu -->
+                             <li>Anak</li>
+                             <li>Putu (Cucu)</li>
+                             <li>Buyut (Cicit)</li>
+                             <li>Canggah</li>
+                             <li>Wareng</li>
+                             <li>Udhek-udhek</li>
+                             <li>Gantung siwur</li>
+                             <li>Cicip Moning</li>
+                             <li>Petarangan Bobrok</li>
+                             <li>Gropak Senthe</li>
+                             <li>Gropak Waton</li>
+                             <li>Cendheng</li>
+                             <li>Giyeng</li>
+                             <li>Cumpleng</li>
+                             <li>Ampleng</li>
+                             <li>Menyaman</li>
+                             <li>Menya Menya</li>
+                             <li>Trah Tumerah</li>
+                         </ol>
+                     </div>
+
+                     <!-- Sub-bagian: Sejarah Singkat (Contoh Placeholder) -->
+                     <div class="info-subsection">
+                         <h4>Sejarah Singkat</h4>
+                         <p>Cerita tentang asal muasal keluarga besar Kasio Mertodimbejo dan Ngatinem Mertodimbejo...</p>
+                         <p>(Konten ini bisa diisi langsung di HTML atau dimuat dari file Markdown nantinya).</p>
+                     </div>
+
+                 </div> <!-- Akhir .info-section -->
+
+            </div> <!-- Akhir .content-box -->
+        </div> <!-- Akhir .main-content -->
+    </div> <!-- Akhir .container -->
+
+    <!-- Modal/Lightbox Structure (Hidden by default) -->
+    <div id="lightbox-modal" class="lightbox-overlay">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-image">
+        <div id="lightbox-caption"></div>
+    </div>
+
+
+    <script src="js/silsilah-manager.js"></script>
+    <script src="js/galeri-loader.js"></script>
+    <script src="js/updates-loader.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 

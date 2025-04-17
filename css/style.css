@@ -1,0 +1,947 @@
+/* Reset dan Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #1e3a5f;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    text-align: center;
+    padding: 0 15px 15px;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.logo h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.logo p {
+    font-size: 10px;
+    line-height: 1.2;
+}
+
+/* Menambahkan search box di sidebar */
+.sidebar-search {
+    padding: 0 15px 15px;
+    margin-bottom: 10px;
+}
+
+.sidebar-search input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px 4px 0 0;
+    font-size: 12px;
+}
+
+.sidebar-search button {
+    width: 100%;
+    padding: 8px;
+    background-color: #4a2c91;
+    color: white;
+    border: none;
+    border-radius: 0 0 4px 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.divider {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 10px 0;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+/* Styling untuk search box di dalam menu */
+.menu .sidebar-search {
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu .sidebar-search input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.menu .sidebar-search button.search-btn {
+    width: 100%;
+    padding: 8px;
+    background-color: #4a9bdc; /* Warna biru langit */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Hapus atau komentar style button yang bertentangan */
+/* 
+.menu .sidebar-search button {
+    width: 100%;
+    padding: 8px;
+    background-color: #4a2c91;
+    color: white;
+    border: none;
+    border-radius: 0 0 4px 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+*/
+
+.menu li {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.menu li.active {
+    background-color: #2c4f7c;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.update-info {
+    margin-top: 20px;
+    padding: 0 15px;
+    flex-grow: 1;
+}
+
+.update-info h3 {
+    background-color: #2c4f7c;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.info-item {
+    margin-bottom: 20px;
+}
+
+.info-item .date {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.info-item .title {
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.info-item .content {
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+.footer {
+    font-size: 12px;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(253, 4, 4, 0.226);
+    margin-top: auto;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    background-color: #e0e9f0;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.header {
+    background: url('../img/banner.jpg') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    max-height: 300px;
+    padding: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1366px) {
+    .header {
+        min-height: 180px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+    }
+    
+    .header {
+        min-height: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        min-height: 120px;
+    }
+    
+    .content-box {
+        margin: 10px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        min-height: 100px;
+    }
+}
+
+/* Menghapus overlay dan text styling karena tulisan akan dihilangkan */
+/* Menghapus styling untuk h1, h2, p, dan motto karena tidak diperlukan lagi */
+
+.content-box {
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.content-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1e3a5f;
+}
+
+/* Family Tree dengan gambar */
+/* Family Tree styling */
+.family-tree {
+    position: relative;
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.family-diagram {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+/* Popup styling untuk zoom */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+}
+
+.popup-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80vh;
+    z-index: 1001;
+}
+
+.popup-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.family-head {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* Ukuran profil */
+.profile {
+    width: 90px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 5px;
+}
+
+.profile img {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+}
+
+.profile-info {
+    padding: 3px;
+    text-align: center;
+}
+
+.profile-info .name {
+    font-size: 8px;
+    margin-bottom: 1px;
+    line-height: 1.1;
+    font-weight: bold;
+}
+
+.profile-info .location,
+.profile-info .generation {
+    font-size: 7px;
+    margin-bottom: 1px;
+    line-height: 1;
+}
+
+/* Menyesuaikan container */
+.children-container {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    position: relative;
+    padding-top: 20px;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+/* Menyesuaikan jarak garis */
+.children-container::before {
+    left: 45px;
+    right: 45px;
+}
+
+.family-head::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 20px;
+    background-color: #e74c3c;
+}
+
+.children-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    position: relative;
+    padding-top: 20px;
+    width: 100%;
+}
+
+.children-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50px;
+    right: 50px;
+    height: 2px;
+    background-color: #e74c3c;
+}
+
+.profile::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 20px;
+    background-color: #e74c3c;
+}
+
+/* Simbol hati untuk pasangan */
+.family-head .profile:first-child::after {
+    content: '❤';
+    position: absolute;
+    right: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #e74c3c;
+    font-size: 12px;
+    z-index: 2;
+}
+
+.children-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background-color: #e74c3c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .profile {
+        width: 120px;
+    }
+    
+    .profile img {
+        height: 120px;
+    }
+}
+
+.profile-info {
+    padding: 10px;
+    text-align: center;
+}
+
+.profile-info .name {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.profile-info .location,
+.profile-info .generation {
+    font-size: 12px;
+    margin-bottom: 3px;
+}
+
+.male .profile-info {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.female .profile-info {
+    background-color: #27ae60;
+    color: white;
+}
+
+/* Intro Text */
+.intro-text {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 0;
+}
+
+.intro-text h3 {
+    margin-bottom: 15px;
+    color: #1e3a5f;
+}
+
+.intro-text p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+/* Generation Info */
+.generation-info {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.generation-info h3 {
+    margin-bottom: 15px;
+    color: #1e3a5f;
+}
+
+.generation-info ol {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding-left: 20px;
+}
+
+.generation-info li {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Silsilah Controls */
+.silsilah-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.silsilah-controls button {
+    padding: 8px 15px;
+    background-color: #1e3a5f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.silsilah-diagram {
+    min-height: 500px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    cursor: grab;
+    background-color: #f8f9fa;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.placeholder-text {
+    color: #777;
+    font-style: italic;
+}
+
+/* Styling saat gambar sedang di-drag */
+.silsilah-diagram.grabbing,
+.silsilah-diagram.grabbing .family-diagram-image {
+    cursor: grabbing;
+}
+
+.family-diagram-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transform-origin: 0 0;
+    transition: transform 0.2s ease-out;
+    pointer-events: none;
+    margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+    }
+    
+    .generation-info ol {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .family-head {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .children-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .generation-info ol {
+        grid-template-columns: 1fr;
+    }
+}
+
+.sidebar-filters {
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.filter-group {
+    margin-bottom: 12px;
+}
+
+.filter-group label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ccc; /* Sedikit lebih redup */
+}
+
+.filter-group select,
+.filter-group input[type="text"] { /* Menargetkan input text juga jika ada */
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #334e6f; /* Background lebih gelap */
+    color: white;
+    font-size: 12px;
+}
+
+.filter-group select:focus {
+    outline: none;
+    border-color: #4a9bdc;
+}
+
+.radio-group label {
+    display: inline-block; /* Menampilkan label di samping radio button */
+    margin-right: 15px;
+    font-size: 12px;
+    font-weight: normal; /* Tidak bold untuk label radio */
+    color: white;
+    cursor: pointer;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 5px;
+    cursor: pointer;
+    /* Optional: Styling custom radio button jika diinginkan */
+}
+
+/* Styling untuk header khusus halaman cabang/lainnya (override default) */
+body[data-branch="kasiran"] .header,
+body[data-branch="sagirah"] .header,
+body[data-branch="sagiran"] .header,
+body[data-branch="sadirah"] .header,
+body[data-branch="midah"] .header,
+body[data-branch="dasiran"] .header,
+body[data-branch="suyadi"] .header,
+body[data-branch="pasinem"] .header,
+body[data-page="keluarga-besar"] .header { /* Tambahkan selector ini */
+    background-image: none;
+    min-height: auto;
+    max-height: none;
+    padding: 0;
+    display: block;
+}
+
+.header-banner-image {
+    width: 100%; /* Buat banner mengisi lebar header */
+    height: auto; /* Jaga rasio aspek gambar */
+    display: block; /* Hapus spasi ekstra di bawah gambar */
+}
+
+/* Styling untuk gambar diagram keluarga spesifik cabang */
+.family-diagram-image {
+    width: 100%; /* Sesuaikan lebar sesuai kebutuhan */
+    max-width: 800px; /* Contoh batas lebar maksimum */
+    height: auto;
+    display: block; /* Tengah secara horizontal jika parent (.silsilah-diagram) punya text-align: center */
+    margin: 20px auto; /* Beri margin atas/bawah dan tengahkan */
+    border: 1px solid #eee; /* Optional: tambahkan border tipis */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: tambahkan shadow */
+    margin-bottom: 0;
+}
+
+/* Hapus style placeholder jika masih ada */
+.silsilah-diagram .placeholder-text {
+    display: none;
+}
+
+/* Styling untuk area info cabang/profil */
+.branch-info {
+    margin-top: 5px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.branch-info h3 {
+    margin-bottom: 10px;
+    color: #1e3a5f;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.branch-info p {
+    margin-bottom: 8px;
+}
+
+/* Override potential width restriction from .family-tree specifically for the main diagram container */
+#main-diagram-container {
+    width: 100%;       /* Lebar penuh mengikuti padding .content-box */
+    max-width: none;   /* Hapus max-width jika ada dari .family-tree */
+    margin-left: 0;    /* Hapus margin auto */
+    margin-right: 0;   /* Hapus margin auto */
+    margin-bottom: 5px;/* Tambahkan jarak 5px di bawah container diagram */
+    padding: 0;        /* Hapus padding jika ada dari .family-tree */
+}
+
+/* Styling untuk gambar di dalam container diagram utama */
+#main-diagram-image {
+    /* Inherit styles dari .family-diagram-image seperti border, shadow */
+    /* Pastikan gambar terpusat jika lebih kecil dari container */
+    margin-left: auto;
+    margin-right: auto;
+    /* Anda mungkin ingin menghapus max-width agar gambar mengisi 100% container,
+       atau biarkan max-width 800px agar tidak terlalu besar di layar lebar */
+    /* max-width: 100%; */ /* Pilihan jika ingin gambar selalu full width container */
+    /* margin-bottom: 0; */ /* Margin bawah gambar tidak relevan karena margin ada di container */
+}
+
+/* Styling untuk Tombol Download (jika ingin dibedakan) */
+#btn-download-hq {
+    background-color: #27ae60; /* Contoh warna hijau */
+    /* Tambahkan style lain jika perlu */
+}
+#btn-download-hq:hover {
+    background-color: #229954;
+}
+
+/* Halaman Galeri & Informasi */
+.gallery-section h3,
+.info-section h3 {
+    margin-bottom: 15px;
+    color: #1e3a5f;
+    border-bottom: 2px solid #e0e9f0;
+    padding-bottom: 8px;
+    font-size: 18px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Grid responsif */
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.gallery-item {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 120px; /* Tinggi tetap untuk thumbnail */
+    object-fit: cover; /* Agar gambar mengisi area tanpa distorsi */
+    display: block;
+}
+
+.gallery-item .caption {
+    padding: 8px;
+    font-size: 12px;
+    text-align: center;
+    background-color: #f8f9fa;
+    color: #555;
+    white-space: nowrap; /* Hindari teks turun */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Tampilkan ... jika teks terlalu panjang */
+}
+
+hr.section-divider {
+    margin: 30px 0;
+    border: none;
+    border-top: 1px solid #e0e9f0;
+}
+
+.info-subsection {
+    margin-bottom: 25px;
+}
+
+.info-subsection h4 {
+    font-size: 16px;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+.info-subsection ul, .info-subsection ol {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+.info-subsection li {
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Compact list for generation */
+ol.generation-list-compact {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+     gap: 5px 15px; /* Jarak vertikal lebih kecil */
+     padding-left: 0; /* Hapus default padding */
+     list-style-position: inside; /* Nomor di dalam */
+}
+
+
+/* Lightbox Styles */
+.lightbox-overlay {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.lightbox-content {
+  margin: auto;
+  display: block;
+  max-width: 85%;
+  max-height: 80vh;
+}
+
+#lightbox-caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 15px 0;
+  font-size: 14px;
+}
+
+.lightbox-overlay, .lightbox-content {
+  animation-name: zoomInLightbox;
+  animation-duration: 0.4s;
+}
+
+@keyframes zoomInLightbox {
+  from {transform:scale(0.8); opacity: 0;}
+  to {transform:scale(1); opacity: 1;}
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus {
+  color: #bbb;
+  text-decoration: none;
+}
+
+/* Styling khusus untuk item info di dalam #pengumuman-container */
+#pengumuman-container .info-item {
+    margin-bottom: 20px; /* Jaga jarak antar pengumuman */
+    padding-bottom: 15px; /* Beri jarak sebelum border bawah */
+    border-bottom: 1px solid #eee; /* Pemisah antar pengumuman */
+}
+#pengumuman-container .info-item:last-child {
+    border-bottom: none; /* Hapus border pada item terakhir */
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#pengumuman-container .info-item .date {
+    font-size: 13px; /* Sedikit lebih besar */
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555; /* Warna lebih soft */
+}
+
+#pengumuman-container .info-item .title {
+    font-size: 15px; /* Lebih besar */
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333; /* Warna standar teks */
+}
+
+#pengumuman-container .info-item .content {
+    font-size: 14px; /* Ukuran normal untuk dibaca */
+    line-height: 1.6; /* Jarak baris standar */
+    color: #444; /* Sedikit lebih gelap dari abu-abu */
+}
+
+/* Styling untuk tombol Baca Selengkapnya/Perkecil */
+#pengumuman-controls {
+    text-align: center; /* Tombol di tengah */
+    margin-top: 15px;
+}
+
+#toggle-pengumuman-btn {
+    padding: 8px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #f0f2f5; /* Warna background netral */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #1e3a5f;
+    transition: background-color 0.2s ease;
+}
+
+#toggle-pengumuman-btn:hover {
+    background-color: #e0e9f0;
+}
+
+/* Class untuk menyembunyikan item pengumuman */
+.announcement-hidden {
+    display: none;
+}
