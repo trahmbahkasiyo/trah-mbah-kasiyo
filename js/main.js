@@ -223,12 +223,21 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     // --- Akhir Kode Hamburger Menu ---
 
-
     // Panggil fungsi inisialisasi lainnya jika ada
-    initDiagramInteraction();
     setupGalleryLightbox();
+    setupAnnouncementToggle();
     // ... (panggil fungsi setup lainnya) ...
 
 }); // Akhir dari DOMContentLoaded
 
-// ... (fungsi initDiagramInteraction, setupGalleryLightbox, dll. yang sudah ada) ...
+// --- Fungsi untuk Lightbox Galeri ---
+function setupGalleryLightbox() {
+    // ... definisi fungsi lightbox ...
+}
+
+// --- Fungsi untuk Toggle Pengumuman ---
+function setupAnnouncementToggle() {
+    // ... definisi fungsi pengumuman ...
+}
+
+// ... (fungsi lainnya) ...

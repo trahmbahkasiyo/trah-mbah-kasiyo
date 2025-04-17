@@ -8,10 +8,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
-<body>
+    <body>
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Menu" aria-expanded="false" aria-controls="sidebar">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="overlay" id="overlay"></div>
+    <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Menu" aria-expanded="false" aria-controls="sidebar">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <div class="overlay" id="overlay"></div>
+
     <div class="container">
         <!-- Sidebar -->
-        <div class="sidebar">
+        <div class="sidebar" id="sidebar" aria-hidden="true">
             <div class="logo">
                 <img src="img/logo.png" alt="Logo Keluarga Besar">
                 <h3>KELUARGA BESAR</h3>
