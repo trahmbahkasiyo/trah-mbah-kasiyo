@@ -950,51 +950,33 @@ ol.generation-list-compact {
 
 /* === RESPONSIVE ADJUSTMENTS === */
 
-/* Tablet & Mobile (Contoh: <= 1024px) */
+/* Tablet & Mobile (Contoh: <= 1024px) - KEMBALIKAN KE VERSI LAMA */
 @media (max-width: 1024px) {
     .hamburger-btn {
         display: block; /* Menampilkan tombol di layar kecil */
     }
 
-    /* Hapus aturan flex-direction: column pada container */
-    /* .container {
-        flex-direction: column;
-    } */
+    /* KEMBALIKAN container jadi kolom */
+    .container {
+        flex-direction: column; 
+    } 
 
+    /* KEMBALIKAN style sidebar untuk layout kolom */
     .sidebar {
-        position: fixed;
-        left: 0;
-        top: 0;
-        height: 100vh;
-        width: 250px;
-        z-index: 1000;
-        transform: translateX(-100%);
-        transition: transform 0.3s ease-in-out;
-        overflow-y: auto;
-        padding-top: 60px;
-        padding-bottom: 20px;
-        /* --- PASTIKAN ADA INI --- */
-        background-color: #1e3a5f; /* Tambahkan/Pastikan background ada */
-        display: flex;             /* Pastikan display flex */
-        flex-direction: column;    /* Pastikan arah kolom */
-        color: white;              /* Pastikan warna teks putih */
-        /* --- AKHIR PENAMBAHAN/PEMASTIAN --- */
+        width: 100%; /* Sidebar jadi full width */
+        /* Hapus position, transform, z-index, dll. */
+        /* Atur padding sesuai kebutuhan layout kolom */
+        padding-top: 15px;
+        padding-bottom: 0; 
+        /* Pastikan background, color, display, flex-direction tidak dioverride jika perlu */
+        /* background-color: #1e3a5f; */ /* Biasanya ini diatur di luar media query */
+        /* display: flex; */            /* Biasanya ini diatur di luar media query */
+        /* flex-direction: column; */   /* Biasanya ini diatur di luar media query */
+        /* color: white; */             /* Biasanya ini diatur di luar media query */
+        /* Hapus height, overflow-y */
     }
 
-    .sidebar.sidebar-visible {
-        transform: translateX(0);
-        box-shadow: 3px 0 10px rgba(0,0,0,0.2);
-    }
-
-    /* Atribut Aksesibilitas (biarkan seperti sebelumnya) */
-    .sidebar[aria-hidden="false"] {
-        display: flex; 
-    }
-     .sidebar[aria-hidden="true"] {
-        display: flex; 
-    }
-
-    /* ... sisa aturan di media query 1024px ... */
+    /* Aturan lain di sini bisa tetap jika masih relevan */
     .generation-info ol {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1124,74 +1106,4 @@ ol.generation-list-compact {
          padding: 6px 15px;
          font-size: 13px;
     }
-}
-
-/* Style Tombol Hamburger (Awalnya Tersembunyi) */
-.hamburger-btn {
-    display: none; /* Penting: Sembunyikan di desktop */
-    position: fixed; 
-    top: 5px;
-    left: 5px;
-    z-index: 1100; /* Penting: Pastikan z-index tinggi */
-    background: #1e3a5f13; /* Agar tombol punya warna */
-    border: none;
-    padding: 10px; /* PENTING: Ini memberi ukuran pada tombol */
-    cursor: pointer; /* Lebih baik dari default */
-    border-radius: 2px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    /* Pastikan tidak ada properti lain yang aneh di sini */
-}
-
-.hamburger-btn span { /* Style untuk garis-garis di dalam tombol */
-    display: block;
-    width: 20px;  /* Lebar garis */
-    height: 3px;   /* Tinggi garis */
-    background-color: white; /* Warna garis */
-    margin: 2px 0; /* Jarak antar garis */
-    transition: all 0.3s ease-in-out;
-}
-
-/* Style untuk Overlay Background Gelap (Awalnya Tersembunyi) */
-.overlay {
-     display: none;
-     position: fixed;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     background-color: rgba(0, 0, 0, 0.082); 
-     z-index: 999; 
-     opacity: 0;
-     transition: opacity 0.3s ease-in-out;
-}
-
-.overlay.active {
-    display: block;
-    opacity: 1;
-}
-
-/* Style Tombol Hamburger saat Aktif (Jadi 'X' - Ukuran 70%) */
-.hamburger-btn.active span:nth-child(1) {
-    /* Kurangi lebar garis menjadi 70% */
-    width: 14px; 
-    /* Kurangi jarak geser vertikal menjadi ~70% */
-    transform: translateY(6px) rotate(45deg); 
-}
-.hamburger-btn.active span:nth-child(2) {
-    /* Tetap sembunyikan garis tengah */
-    opacity: 0;
-}
-.hamburger-btn.active span:nth-child(3) {
-    /* Kurangi lebar garis menjadi 70% */
-    width: 14px;
-    /* Kurangi jarak geser vertikal menjadi ~70% */
-    transform: translateY(-6px) rotate(-45deg); 
-}
-
-/* === RESPONSIVE ADJUSTMENTS === */
-@media (max-width: 1024px) {
-    .hamburger-btn {
-        display: block; /* Menampilkan tombol di layar kecil */
-    }
-    /* ... aturan sidebar dan lainnya di sini ... */
 }

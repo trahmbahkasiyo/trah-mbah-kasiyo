@@ -1,126 +1,80 @@
 <!DOCTYPE html>
-<button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Menu" aria-expanded="false" aria-controls="sidebar">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-    <div class="overlay" id="overlay"></div>
-    <div class="container">
-        <span></span>
-        <span></span>
-    </button>
-    <div class="overlay" id="overlay"></div>
-
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Silsilah Keluarga Besar Kasio Mertodimbejo & Ngatinem Mertodimbejo</title>
-    <link rel="stylesheet" href="css/style.css?v=1">
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
-    <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Menu" aria-expanded="false" aria-controls="sidebar">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-    <div class="overlay" id="overlay"></div>
-
-    <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Menu" aria-expanded="false" aria-controls="sidebar">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-    <div class="overlay" id="overlay"></div>
-
+<body>
     <div class="container">
         <!-- Sidebar -->
-        <div class="sidebar" id="sidebar" aria-hidden="true">
+        <div class="sidebar">
             <div class="logo">
                 <img src="img/logo.png" alt="Logo Keluarga Besar">
                 <h3>KELUARGA BESAR</h3>
                 <p>KASIO MERTODIMBEJO & NGATINEM MERTODIMBEJO</p>
             </div>
             
-            <!-- Menghapus search box dari sini -->
-            
             <div class="divider"></div>
             
             <div class="menu">
-                <ul>
-                    <div class="sidebar-search">
-                        <input type="text" id="search-input" placeholder="Cari Nama...">
-                        <button class="search-btn" id="search-button">Cari</button>
-                    </div>
+                <div class="sidebar-search">
+                    <input type="text" id="search-input" placeholder="Cari Nama...">
+                    <button class="search-btn" id="search-button">Cari</button>
+                </div>
 
-                    <!-- Tambahkan Filter di sini -->
-                    <div class="sidebar-filters">
-                        <div class="filter-group">
-                            <label for="filter-generasi">Generasi:</label>
-                            <select id="filter-generasi" name="generasi">
-                                <option value="">Semua Generasi</option>
-                                <!-- Opsi generasi akan diisi oleh JS atau bisa hardcode jika tetap -->
-                                <option value="Anak">Anak</option>
-                                <option value="Putu">Putu (Cucu)</option>
-                                <option value="Buyut">Buyu (Cicit)</option>
-                                <option value="Canggah">Canggah</option>
-                                <option value="Wareng">Wareng</option>
-                                <!-- Lanjutkan sesuai daftar generasi di README -->
-                                <option value="Udhek-udhek">Udhek-udhek</option>
-                                <option value="Gantung siwur">Gantung siwur</option>
-                                <option value="Cicip Moning">Cicip Moning</option>
-                                <option value="Petarangan Bobrok">Petarangan Bobrok</option>
-                                <option value="Gropak Senthe">Gropak Senthe</option>
-                                <option value="Gropak Waton">Gropak Waton</option>
-                                <option value="Cendheng">Cendheng</option>
-                                <option value="Giyeng">Giyeng</option>
-                                <option value="Cumpleng">Cumpleng</option>
-                                <option value="Ampleng">Ampleng</option>
-                                <option value="Menyaman">Menyaman</option>
-                                <option value="Menya Menya">Menya Menya</option>
-                                <option value="Trah Tumerah">Trah Tumerah</option>
-                            </select>
-                        </div>
-                        <div class="filter-group">
-                            <label>Jenis Kelamin:</label>
-                            <div class="radio-group">
-                                <input type="radio" id="gender-semua" name="jenisKelamin" value="" checked>
-                                <label for="gender-semua">Semua</label>
-                                <input type="radio" id="gender-pria" name="jenisKelamin" value="Pria">
-                                <label for="gender-pria">Pria</label>
-                                <input type="radio" id="gender-wanita" name="jenisKelamin" value="Wanita">
-                                <label for="gender-wanita">Wanita</label>
-                            </div>
-                        </div>
-                         <!-- Tambahkan filter status jika diinginkan -->
-                         <!--
-                         <div class="filter-group">
-                             <label>Status:</label>
-                             <div class="radio-group">
-                                 <input type="radio" id="status-semua" name="status" value="" checked>
-                                 <label for="status-semua">Semua</label>
-                                 <input type="radio" id="status-hidup" name="status" value="Hidup">
-                                 <label for="status-hidup">Hidup</label>
-                                 <input type="radio" id="status-meninggal" name="status" value="Meninggal">
-                                 <label for="status-meninggal">Meninggal</label>
-                             </div>
-                         </div>
-                         -->
+                <div class="sidebar-filters">
+                    <div class="filter-group">
+                        <label for="filter-generasi">Generasi:</label>
+                        <select id="filter-generasi" name="generasi">
+                            <option value="">Semua Generasi</option>
+                            <option value="Anak">Anak</option>
+                            <option value="Putu">Putu (Cucu)</option>
+                            <option value="Buyut">Buyu (Cicit)</option>
+                            <option value="Canggah">Canggah</option>
+                            <option value="Wareng">Wareng</option>
+                            <option value="Udhek-udhek">Udhek-udhek</option>
+                            <option value="Gantung siwur">Gantung siwur</option>
+                            <option value="Cicip Moning">Cicip Moning</option>
+                            <option value="Petarangan Bobrok">Petarangan Bobrok</option>
+                            <option value="Gropak Senthe">Gropak Senthe</option>
+                            <option value="Gropak Waton">Gropak Waton</option>
+                            <option value="Cendheng">Cendheng</option>
+                            <option value="Giyeng">Giyeng</option>
+                            <option value="Cumpleng">Cumpleng</option>
+                            <option value="Ampleng">Ampleng</option>
+                            <option value="Menyaman">Menyaman</option>
+                            <option value="Menya Menya">Menya Menya</option>
+                            <option value="Trah Tumerah">Trah Tumerah</option>
+                        </select>
                     </div>
-                    <!-- Akhir Filter -->
+                    <div class="filter-group">
+                        <label>Jenis Kelamin:</label>
+                        <div class="radio-group">
+                            <input type="radio" id="gender-semua" name="jenisKelamin" value="" checked>
+                            <label for="gender-semua">Semua</label>
+                            <input type="radio" id="gender-pria" name="jenisKelamin" value="Pria">
+                            <label for="gender-pria">Pria</label>
+                            <input type="radio" id="gender-wanita" name="jenisKelamin" value="Wanita">
+                            <label for="gender-wanita">Wanita</label>
+                        </div>
+                    </div>
+                </div>
 
-                    <li class="active"><a href="#">BERANDA</a></li>
-                    <li><a href="kasiran.html">KASIRAN</a></li>
-                    <li><a href="sagirah.html">SAGIRAH</a></li>
-                    <li><a href="sagiran.html">SAGIRAN</a></li>
-                    <li><a href="sadirah.html">SADIRAH</a></li>
-                    <li><a href="midah.html">MIDAH</a></li>
-                    <li><a href="dasiran.html">DASIRAN</a></li>
-                    <li><a href="suyadi.html">SUYADI</a></li>
-                    <li><a href="pasinem.html">PASINEM</a></li>
-                    <li><a href="keluarga-besar.html">KELUARGA BESAR</a></li>
-                    <li><a href="galeri.html">GALERI & INFORMASI</a></li>
-                </ul>
+                <li class="active"><a href="#">BERANDA</a></li>
+                <li><a href="kasiran.html">KASIRAN</a></li>
+                <li><a href="sagirah.html">SAGIRAH</a></li>
+                <li><a href="sagiran.html">SAGIRAN</a></li>
+                <li><a href="sadirah.html">SADIRAH</a></li>
+                <li><a href="midah.html">MIDAH</a></li>
+                <li><a href="dasiran.html">DASIRAN</a></li>
+                <li><a href="suyadi.html">SUYADI</a></li>
+                <li><a href="pasinem.html">PASINEM</a></li>
+                <li><a href="keluarga-besar.html">KELUARGA BESAR</a></li>
+                <li><a href="galeri.html">GALERI & INFORMASI</a></li>
             </div>
             <div class="update-info" id="update-info-container">
                 <h3>UPDATE INFO TERBARU</h3>
@@ -140,17 +94,14 @@
 
             <div class="content-box">
                 <h2>KELUARGA KASIO MERTODIMBEJO & NGATINEM MERTODIMBEJO</h2>
-
-                <!-- TAMBAHKAN Kontrol Diagram di sini -->
+                
                 <div class="silsilah-controls">
                     <button id="btn-main-zoom-in">Zoom In</button>
                     <button id="btn-main-zoom-out">Zoom Out</button>
                     <button id="btn-main-reset">Reset</button>
                     <button id="btn-main-export">Export</button>
                 </div>
-                <!-- AKHIR Kontrol Diagram -->
 
-                <!-- Modifikasi Kontainer dan Gambar Diagram -->
                 <div class="family-tree silsilah-diagram" id="main-diagram-container">
                     <img src="img/family-diagram.png" alt="Silsilah Keluarga" class="family-diagram-image" id="main-diagram-image">
                 </div>
