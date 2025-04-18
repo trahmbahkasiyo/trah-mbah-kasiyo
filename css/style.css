@@ -1170,15 +1170,18 @@ ol.generation-list-compact {
     opacity: 1;
 }
 
-/* Style Tombol Hamburger saat Aktif (Jadi 'X') */
+/* Style Tombol Hamburger saat Aktif (Jadi '<') */
 .hamburger-btn.active span:nth-child(1) {
-    transform: translateY(4px) rotate(25deg);
+    /* Putar 45 derajat dan geser sedikit ke bawah */
+    transform: translateY(6px) rotate(45deg); 
 }
 .hamburger-btn.active span:nth-child(2) {
+    /* Tetap sembunyikan garis tengah */
     opacity: 0;
 }
 .hamburger-btn.active span:nth-child(3) {
-    transform: translateY(-4px) rotate(-25deg);
+    /* Putar -45 derajat dan geser sedikit ke atas */
+    transform: translateY(-6px) rotate(-45deg); 
 }
 
 /* === RESPONSIVE ADJUSTMENTS === */
