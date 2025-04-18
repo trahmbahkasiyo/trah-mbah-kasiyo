@@ -1147,7 +1147,7 @@ ol.generation-list-compact {
     width: 20px;  /* Lebar garis */
     height: 3px;   /* Tinggi garis */
     background-color: white; /* Warna garis */
-    margin: 1px 0; /* Jarak antar garis */
+    margin: 2px 0; /* Jarak antar garis */
     transition: all 0.3s ease-in-out;
 }
 
@@ -1172,13 +1172,13 @@ ol.generation-list-compact {
 
 /* Style Tombol Hamburger saat Aktif (Jadi 'X') */
 .hamburger-btn.active span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+    transform: translateY(4px) rotate(25deg);
 }
 .hamburger-btn.active span:nth-child(2) {
     opacity: 0;
 }
 .hamburger-btn.active span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-4px) rotate(-25deg);
 }
 
 /* === RESPONSIVE ADJUSTMENTS === */
