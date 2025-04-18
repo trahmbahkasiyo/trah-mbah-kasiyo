@@ -952,11 +952,6 @@ ol.generation-list-compact {
 
 /* Tablet & Mobile (Contoh: <= 1024px) - KEMBALIKAN KE VERSI LAMA */
 @media (max-width: 1024px) {
-    .hamburger-btn {
-        display: block; /* Menampilkan tombol di layar kecil */
-    }
-
-    /* KEMBALIKAN container jadi kolom */
     .container {
         flex-direction: column; 
     } 
@@ -964,16 +959,8 @@ ol.generation-list-compact {
     /* KEMBALIKAN style sidebar untuk layout kolom */
     .sidebar {
         width: 100%; /* Sidebar jadi full width */
-        /* Hapus position, transform, z-index, dll. */
-        /* Atur padding sesuai kebutuhan layout kolom */
         padding-top: 15px;
         padding-bottom: 0; 
-        /* Pastikan background, color, display, flex-direction tidak dioverride jika perlu */
-        /* background-color: #1e3a5f; */ /* Biasanya ini diatur di luar media query */
-        /* display: flex; */            /* Biasanya ini diatur di luar media query */
-        /* flex-direction: column; */   /* Biasanya ini diatur di luar media query */
-        /* color: white; */             /* Biasanya ini diatur di luar media query */
-        /* Hapus height, overflow-y */
     }
 
     /* Aturan lain di sini bisa tetap jika masih relevan */
